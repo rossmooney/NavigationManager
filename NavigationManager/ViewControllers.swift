@@ -8,8 +8,8 @@
 
 import UIKit
 
-protocol Pusher { }
-extension Pusher where Self : UIViewController {
+protocol Presenter { }
+extension Presenter where Self : UIViewController {
     func showAnotherViewController(type: NavigationManager.ViewControllerType) {
         NavigationManager.singleton.pushVC(type)
     }
@@ -28,7 +28,7 @@ extension Pusher where Self : UIViewController {
 }
 
 
-class RedViewController: UIViewController, Pusher {
+class RedViewController: UIViewController, Presenter {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,7 @@ class RedViewController: UIViewController, Pusher {
     }
 }
 
-class BlueViewController: UIViewController, Pusher {
+class BlueViewController: UIViewController, Presenter {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +82,7 @@ class BlueViewController: UIViewController, Pusher {
 }
 
 
-class BlackViewController: UIViewController, Pusher {
+class BlackViewController: UIViewController, Presenter {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -108,7 +108,7 @@ class BlackViewController: UIViewController, Pusher {
 }
 
 
-class WhiteViewController: UIViewController, Pusher {
+class WhiteViewController: UIViewController, Presenter {
     
     override func viewDidLoad() {
         super.viewDidLoad()
