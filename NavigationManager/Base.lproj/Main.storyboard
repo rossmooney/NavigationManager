@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="808-4k-Aba">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Red View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedViewController" id="BYZ-38-t0r" customClass="RedViewController" customModule="NavigationManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,210 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eEh-NB-IPu">
+                                <rect key="frame" x="60" y="80" width="40" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we6-il-3Ds">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
+                                        <state key="normal" title="Blue"/>
+                                        <connections>
+                                            <action selector="showBlue" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQW-ZQ-xph"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2R-0L-yhu">
+                                        <rect key="frame" x="0.0" y="30" width="40" height="30"/>
+                                        <state key="normal" title="Black"/>
+                                        <connections>
+                                            <action selector="showBlack" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWO-0l-SlH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMx-cq-DRT">
+                                        <rect key="frame" x="0.0" y="60" width="40" height="30"/>
+                                        <state key="normal" title="White"/>
+                                        <connections>
+                                            <action selector="showWhite" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vj-Do-y6U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.20228040759999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gyC-YC-tTg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="533" y="338"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mj4-ee-uK2">
+            <objects>
+                <navigationController id="808-4k-Aba" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RSj-jp-KET">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tpx-fp-dcX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tiz-ur-cAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-933" y="1527"/>
+        </scene>
+        <!--Blue View Controller-->
+        <scene sceneID="Y6d-X6-usl">
+            <objects>
+                <viewController storyboardIdentifier="BlueViewController" id="dSA-aW-AIt" customClass="BlueViewController" customModule="NavigationManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AcD-PX-ijN"/>
+                        <viewControllerLayoutGuide type="bottom" id="1dE-Ru-I1N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ALP-lF-UEd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fGW-Tv-4G6">
+                                <rect key="frame" x="35" y="95" width="40" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MX6-oo-zzc">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
+                                        <state key="normal" title="Red">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showBlue" destination="BYZ-38-t0r" eventType="touchUpInside" id="JBX-XM-SI5"/>
+                                            <action selector="showRed" destination="dSA-aW-AIt" eventType="touchUpInside" id="H2x-H1-Xfl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKe-uc-9S8">
+                                        <rect key="frame" x="0.0" y="30" width="40" height="30"/>
+                                        <state key="normal" title="Black">
+                                            <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showBlack" destination="dSA-aW-AIt" eventType="touchUpInside" id="fsI-IJ-f3w"/>
+                                            <action selector="showBlack" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3t-9v-v6p"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hy-2k-zMS">
+                                        <rect key="frame" x="0.0" y="60" width="40" height="30"/>
+                                        <state key="normal" title="White">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="showWhite" destination="dSA-aW-AIt" eventType="touchUpInside" id="Qba-3H-9B2"/>
+                                            <action selector="showWhite" destination="BYZ-38-t0r" eventType="touchUpInside" id="feY-zS-ejh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.08235294118" green="0.50588235290000005" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jyQ-ef-P1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="562" y="1040"/>
+        </scene>
+        <!--White View Controller-->
+        <scene sceneID="luQ-Jt-XN0">
+            <objects>
+                <viewController storyboardIdentifier="WhiteViewController" id="hil-3L-sWv" customClass="WhiteViewController" customModule="NavigationManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LXc-Lv-T1j"/>
+                        <viewControllerLayoutGuide type="bottom" id="x3Z-II-66A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cLl-Dd-H8U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xng-0a-zCd">
+                                <rect key="frame" x="26" y="94" width="38" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu7-bZ-ZUm">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="Blue"/>
+                                        <connections>
+                                            <action selector="showBlue" destination="BYZ-38-t0r" eventType="touchUpInside" id="92l-rP-FCz"/>
+                                            <action selector="showBlue" destination="hil-3L-sWv" eventType="touchUpInside" id="f2Q-mt-3B2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZc-Kf-4Yb">
+                                        <rect key="frame" x="0.0" y="30" width="38" height="30"/>
+                                        <state key="normal" title="Black"/>
+                                        <connections>
+                                            <action selector="showBlack" destination="hil-3L-sWv" eventType="touchUpInside" id="4wa-5Y-KUH"/>
+                                            <action selector="showBlack" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwR-mq-aIx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CaZ-oL-GEc">
+                                        <rect key="frame" x="0.0" y="60" width="38" height="30"/>
+                                        <state key="normal" title="Red"/>
+                                        <connections>
+                                            <action selector="showRed" destination="hil-3L-sWv" eventType="touchUpInside" id="muH-RZ-HLv"/>
+                                            <action selector="showWhite" destination="BYZ-38-t0r" eventType="touchUpInside" id="tM5-aP-1Qs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOK-F5-0Bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="331"/>
+        </scene>
+        <!--Black View Controller-->
+        <scene sceneID="pp6-tH-hfZ">
+            <objects>
+                <viewController storyboardIdentifier="BlackViewController" id="PEs-c0-K7X" customClass="BlackViewController" customModule="NavigationManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2lc-kV-FXP"/>
+                        <viewControllerLayoutGuide type="bottom" id="1n6-23-u7O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CY8-Xl-OWP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ecc-Oe-bIf">
+                                <rect key="frame" x="56" y="96" width="40" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i36-H7-yRz">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
+                                        <state key="normal" title="Blue"/>
+                                        <connections>
+                                            <action selector="showBlue" destination="PEs-c0-K7X" eventType="touchUpInside" id="EGc-86-z09"/>
+                                            <action selector="showBlue" destination="BYZ-38-t0r" eventType="touchUpInside" id="znJ-k8-soW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlK-cp-ldH">
+                                        <rect key="frame" x="0.0" y="30" width="40" height="30"/>
+                                        <state key="normal" title="Red"/>
+                                        <connections>
+                                            <action selector="showBlack" destination="BYZ-38-t0r" eventType="touchUpInside" id="d03-IC-OZ7"/>
+                                            <action selector="showRed" destination="PEs-c0-K7X" eventType="touchUpInside" id="k7C-Nz-ym3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eF-In-zSH">
+                                        <rect key="frame" x="0.0" y="60" width="40" height="30"/>
+                                        <state key="normal" title="White"/>
+                                        <connections>
+                                            <action selector="showWhite" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4O-Pr-8MM"/>
+                                            <action selector="showWhite" destination="PEs-c0-K7X" eventType="touchUpInside" id="uTc-6B-GsR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7aw-ho-LrL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682" y="1819"/>
         </scene>
     </scenes>
 </document>
