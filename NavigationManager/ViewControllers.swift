@@ -10,19 +10,19 @@ import UIKit
 
 protocol Presenter { }
 extension Presenter where Self : UIViewController {
-    func showAnotherViewController(type: NavigationManager.ViewControllerType) {
+    func showAnotherViewController(type: NavigationManager.ViewControllerId) {
         NavigationManager.singleton.pushVC(type)
     }
     
-    func setNewRootViewController(type: NavigationManager.ViewControllerType) {
+    func setNewRootViewController(type: NavigationManager.ViewControllerId) {
         NavigationManager.singleton.pushVC(type, presentation: .Root)
     }
     
-    func replaceViewController(type: NavigationManager.ViewControllerType) {
+    func replaceViewController(type: NavigationManager.ViewControllerId) {
         NavigationManager.singleton.pushVC(type, presentation: .Replace)
     }
     
-    func showModalViewController(type: NavigationManager.ViewControllerType, completionHandler: (() -> Void)?) {
+    func showModalViewController(type: NavigationManager.ViewControllerId, completionHandler: (() -> Void)?) {
         NavigationManager.singleton.pushVC(type, presentation: .Modal(completion: completionHandler))
     }
 }

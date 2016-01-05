@@ -16,7 +16,7 @@ class NavigationManager {
     var navigationController:UINavigationController!
     var currentPresentation:Presentation = .Root
     
-    enum ViewControllerType : String {
+    enum ViewControllerId : String {
         case Red = "RedViewController"
         case Blue = "BlueViewController"
         case Black = "BlackViewController"
@@ -40,7 +40,7 @@ class NavigationManager {
         }
     }
     
-    func pushVC(vc: ViewControllerType, presentation:Presentation = .Push) {
+    func pushVC(vc: ViewControllerId, presentation:Presentation = .Push) {
         let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(vc.rawValue)
 
         if case .Modal(_) = self.currentPresentation {
